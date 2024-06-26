@@ -23,8 +23,8 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body className={jetbrainsMono.variable}>
-        <Header className="relative z-50" /> {/* Add z-index here */}
-        <StairTransition />
+        <Header />
+        <StairTransition/>
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
