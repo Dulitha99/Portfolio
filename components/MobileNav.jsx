@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
@@ -24,10 +24,12 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {Links.map((link) => (
-          <Link key={link.path} href={link.path}>
-            <a className={pathname === link.path ? "active-link" : ""}>
-              {link.name}
-            </a>
+          <Link
+            key={link.path}
+            href={link.path}
+            className={pathname === link.path ? "active-link" : ""}
+          >
+            {link.name}
           </Link>
         ))}
       </SheetContent>
